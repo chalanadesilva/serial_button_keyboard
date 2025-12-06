@@ -1,4 +1,4 @@
-# Arduino Keystroke Injection Project
+# Programmable Arduino Serial Keyboard
 
 ## Usage Instructions
 
