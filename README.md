@@ -10,7 +10,7 @@
   - `\enter`: Sends an Enter keystroke when the button is pressed.
   - `\ctrl-<char>`: Sends Control + the specified character when the button is pressed.
   - `\reset`: Clears all stored commands for all buttons.
-  - `\delete`: Can be stored on a button to clear its assigned command when pressed.
+  - `\delete`: Send a Backspace keystroke when the button is pressed.
 
 - **Button Pressing:** Connect buttons to digital pins:
   - **Pin 2**: Button 1 (default)
@@ -23,7 +23,7 @@
   - After storing your commands, unplug the USB cable and connect the Arduino to another computer.
   - To keep the stored values when unplugged, use an external power supply (such as a battery or USB power bank). Without external power, the Arduino will reset and lose its stored variables.
 
-- **Triggering Actions:** When a button is pressed, the Arduino injects the stored text (or command) as keystrokes. If a button has `\delete` stored, pressing it clears its assigned command.
+- **Triggering Actions:** When a button is pressed, the Arduino injects the stored text (or command) as keystrokes. 
 
 ## Available Functions
 
