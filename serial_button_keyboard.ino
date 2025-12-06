@@ -1,7 +1,7 @@
 #include <Keyboard.h>
 
 String storedText[3] = {"", "", ""}; // Stores text for each button
-const int buttonPins[3] = {22, 21, 20}; // GP22, GP21, GP20
+const int buttonPins[3] = {2, 3, 4}; // pins 2, 3, and 4
 bool buttonPressed[3] = {false, false, false};
 bool lastButtonState[3] = {HIGH, HIGH, HIGH};
 unsigned long lastDebounceTime[3] = {0, 0, 0};
