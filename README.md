@@ -9,6 +9,8 @@
   - Simple text (without prefix): Defaults to button 1.
   - `\enter`: Sends an Enter keystroke when the button is pressed.
   - `\ctrl-<char>`: Sends Control + the specified character when the button is pressed.
+  - `\reset`: Clears all stored commands for all buttons.
+  - `\delete`: Can be stored on a button to clear its assigned command when pressed.
 
 - **Button Pressing:** Connect buttons to digital pins:
   - **Pin 2**: Button 1 (default)
@@ -16,7 +18,12 @@
   - **Pin 4**: Button 3
   - Each button is connected between the pin and GND; pull-up is enabled internally in code.
 
-- **Triggering Actions:** When a button is pressed, the board injects the stored text (or command) as keystrokes.
+- **Storing and Using Keystrokes:**
+  - First, connect the Arduino to your computer and use the serial monitor to assign the desired text or commands to each button.
+  - After storing your commands, unplug the USB cable and connect the Arduino to another computer.
+  - To keep the stored values when unplugged, use an external power supply (such as a battery or USB power bank). Without external power, the Arduino will reset and lose its stored variables.
+
+- **Triggering Actions:** When a button is pressed, the Arduino injects the stored text (or command) as keystrokes. If a button has `\delete` stored, pressing it clears its assigned command.
 
 ## Available Functions
 
@@ -24,6 +31,8 @@
 - **Special Commands:**
   - `\enter` sends an Enter keystroke.
   - `\ctrl-<char>` sends Control + the specified character.
+  - `\reset` clears all stored commands.
+  - `\delete` clears the command stored on a specific button.
 - **Default Behavior:** If no specific command is assigned, pressing a button will type the stored string.
 
 ## Flexibility
@@ -33,4 +42,4 @@
 
 ---
 
-This setup works on any Arduino board that supports USB HID and the Keyboard library, with buttons connected to pins 2, 3, and 4[web:127].
+This setup works on any Arduino board that supports USB HID and the Keyboard library, with buttons connected to pins 2, 3, and 4[web:129][web:130].
